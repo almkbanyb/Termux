@@ -1,6 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/zsh
 #
-# This is a termux-url-opener script to run usefull tasks on my smartphone (Android)
+# This is a termux-url-opener script to do diffrent tasks on my Android phone 
+#
 
 url=$1
 echo "What should I do with $url ?"
@@ -16,13 +17,13 @@ case $CHOICE in
         youtube-dl -o /data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s $url
 	;;
     u)
-        youtube-dl -o ~/storage/music/music.flv $url 
 	echo "Artist"
 	read artist
 	echo "Title"
 	read title
 	echo "Album"
 	read album
+        youtube-dl -o ~/storage/music/music.flv $url 
 	ffmpeg -i ~/storage/music/music.flv ~/storage/music/$artist-$title.mp3 
         mid3v2 -a $artist -t $title -A $album ~/storage/music/$artist-$title.mp3
 	rm ~/storage/music/music.flv
@@ -38,5 +39,3 @@ case $CHOICE in
         echo "bye"
 	;; 
 esac
-
-
