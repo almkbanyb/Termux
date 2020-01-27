@@ -21,7 +21,7 @@
 #
 # Install youtube_dl and scdl with pip
 # ➜ pip install youtube_dl
-# ➜ pip install scdl
+# ➜ pip install scdl mutagen
 #
 # run the following command to enable the termux storage features
 # ➜ termux-setup-storage
