@@ -2,6 +2,26 @@
 #
 # This is a termux-url-opener script to do diffrent tasks on my Android phone 
 #
+#
+#
+# How to use this script
+#############################
+# Create the bin directory
+# ➜ ~ mkdir bin
+# ➜ ~ cd bin
+# Create the script (copy & paste) I use neovim. Use your prefered editor
+# ➜ nvim termux-url-opener
+# 
+# Make it executable
+# ➜ chmod +x termux-url-opener
+# 
+# Install zsh wget and ffmpeg
+# ➜ pkg install zsh wget ffmpeg python
+# https://wiki.termux.com/wiki/Shells
+#
+# Install youtube_dl and scdl with pip
+# ➜ pip install youtube_dl
+# ➜ pip install scdl
 
 url=$1
 echo "What should I do with $url ?"
