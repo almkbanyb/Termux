@@ -47,13 +47,11 @@ case $CHOICE in
 	read title
 	echo "Album"
 	read album
-        youtube-dl -o ~/storage/music/music.flv $url 
-	ffmpeg -i ~/storage/music/music.flv ~/storage/music/$artist-$title.mp3 
-        mid3v2 -a $artist -t $title -A $album ~/storage/music/$artist-$title.mp3
-	rm ~/storage/music/music.flv
+	youtube-dl --extract-audio --audio-format mp3 --output "/storage/emulated/0/Music/$artist-$title.%(ext)s" $url
+	mid3v2 -a $artist -t $title -A $album /storage/emulated/0/Music/$artist-$title.mp3
 	;;
     s)
-	scdl -l $url --path ~/storage/music
+	scdl -l $url --path /storage/emulated/0/Music
         echo "s need some work"
 	;;
     w)
