@@ -38,7 +38,7 @@ echo "x) nothing"
 read CHOICE
 case $CHOICE in
     y)
-        youtube-dl -o /data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s $url
+        youtube-dl -o "/storage/emulated/0/Movies/%(title)s.%(ext)s" $url
 	;;
     u)
 	echo "Artist"
