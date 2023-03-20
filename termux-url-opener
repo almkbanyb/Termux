@@ -19,8 +19,8 @@
 # ➜ pkg install zsh wget ffmpeg python
 # https://wiki.termux.com/wiki/Shells
 #
-# Install youtube_dl and scdl with pip
-# ➜ pip install youtube_dl
+# Install yt-dlp and scdl with pip
+# ➜ pip install yt-dlp
 # ➜ pip install scdl mutagen
 #
 # run the following command to enable the termux storage features
