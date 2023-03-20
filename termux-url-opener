@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/zsh
+#!/data/data/com.termux/files/usr/bin/bash
 #
 # This is a termux-url-opener script to do diffrent tasks on my Android phone 
 #
@@ -38,7 +38,7 @@ echo "x) nothing"
 read CHOICE
 case $CHOICE in
     y)
-        youtube-dl -o "/storage/emulated/0/Movies/%(title)s.%(ext)s" $url
+        yt-dlp -o "/storage/emulated/0/Movies/%(title)s.%(ext)s" $url
 	;;
     u)
 	echo "Artist"
@@ -47,7 +47,7 @@ case $CHOICE in
 	read title
 	echo "Album"
 	read album
-	youtube-dl --extract-audio --audio-format mp3 --output "/storage/emulated/0/Music/$artist-$title.%(ext)s" $url
+	yt-dlp --extract-audio --audio-format mp3 --output "/storage/emulated/0/Music/$artist-$title.%(ext)s" $url
 	mid3v2 -a $artist -t $title -A $album /storage/emulated/0/Music/$artist-$title.mp3
 	;;
     s)
