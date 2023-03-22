@@ -6,26 +6,41 @@
 #
 # How to use this script
 #############################
+#  Install wget and ffmpeg
+# ➜ pkg install wget ffmpeg python
+# https://wiki.termux.com/wiki/Shells
+#
+## Install yt-dlp and scdl with pip
+# ➜ pip install yt-dlp
+# ➜ pip install scdl mutagen
+##
 # Create the bin directory
-# ➜ ~ mkdir bin
 # ➜ ~ cd bin
-# Create the script (copy & paste) I use neovim. Use your prefered editor
-# ➜ nvim termux-url-opener
+#
+# Download the script
+# ➜ ~ wget https://gist.githubusercontent.com/LordH3lmchen/dc35e8df3dc41d126683f18fe44ebe17/raw/fec1b164219c4c1714d13cb65acb81c57ec25572/termux-url-opener
 # 
 # Make it executable
 # ➜ chmod +x termux-url-opener
-# 
-# Install zsh wget and ffmpeg
-# ➜ pkg install zsh wget ffmpeg python
-# https://wiki.termux.com/wiki/Shells
-#
-# Install yt-dlp and scdl with pip
-# ➜ pip install yt-dlp
-# ➜ pip install scdl mutagen
-#
+
 # run the following command to enable the termux storage features
 # ➜ termux-setup-storage
 # https://wiki.termux.com/wiki/Termux-setup-storage
+#
+#
+# Feel free to fork it and clone it (alternative way to get the script to the phone)
+# 
+# ➜ ~ mkdir bin
+#
+# ➜ ~ git clone git@gist.github.com:dc35e8df3dc41d126683f18fe44ebe17.git termux-url-opener
+# (replace with your fork if you want)
+#
+# ➜ ~ ln -s $HOME/termux-url-opener/termux-url-opener bin/termux-url-opener
+# now you can modify it on your phone and use git to update the script
+#
+# use "git pull" to get the latest version.
+#
+#
 
 url=$1
 echo "What should I do with $url ?"
